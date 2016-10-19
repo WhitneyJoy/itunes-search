@@ -15,9 +15,6 @@
 }
 
 #grad {
-  background: red; 
-  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); 
-}
-li{
-	color:purple;
+/*  background: red; */
+  background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,0,0,1)); 
 }
