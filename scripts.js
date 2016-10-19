@@ -7,16 +7,14 @@ function getData(userInput){
     dataType: 'jsonp'
   }).done(function(data){
     displayDataResults(data);
-    // console.log(data);
   }).fail(function(error){
-    // console.log("an error occurred!");
   });
 }
 
 function displayDataResults(data){
   for(var i = 0; i < data.results.length; i++){
   var apiResults = data.results[i];
-  document.getElementById("displayArea").innerHTML += "<hr>" + "Song Name: " + apiResults.trackName + " Artist: " + apiResults.artistName + " Album: " + apiResults.collectionName;
+  document.getElementById("displayArea").innerHTML += "<hr>" + "Song Name: " + apiResults.trackName + " Artist: " + apiResults.artistName + " Album: " + apiResults.collectionName + "<hr>" + "<img alt='album art' src=" + apiResults.artworkUrl60 + " height='42' width='42'>"  +  "<br>" + "<audio controls><source src=" + apiResults.previewUrl + " type='audio/mpeg'></audio>";
 }
 
 }
